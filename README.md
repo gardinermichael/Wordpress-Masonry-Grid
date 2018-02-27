@@ -7,6 +7,8 @@ A masonry grid hosted on a Wordpress page
 
 * [Custom Post Type UI](https://wordpress.org/plugins/custom-post-type-ui/)
   * Simplify making custom post types in Wordpress and editing them in bulk.
+* [Bulk Images to Posts](https://wordpress.org/plugins/bulk-images-to-posts/)
+  * Drag and drop images to upload. Preselect the filterable Category/Taxonomy.
 * [BJ Lazy Load](https://wordpress.org/plugins/bj-lazy-load/)
   * Lazy load post thumbnails (what the images are saved as in Wordpress).
 * [Regenerate Thumbnails](https://wordpress.org/plugins/regenerate-thumbnails/)
@@ -32,6 +34,6 @@ A masonry grid hosted on a Wordpress page
   * In my case, the post type was Newspaper Covers.
 * Decide if you want to use Taxonomies or Categories to filter the images.
   * Category will show up for ALL your posts.
-  * Taxonomy will only show up for your custom post type. Use CPT to create it and turn on the hierarchical setting (otherwise it'll act like tags)
+  * Taxonomy will only show up for your custom post type. Use CPT to create it and turn on the hierarchical setting (it'll otherwise act like tags)
    
   
