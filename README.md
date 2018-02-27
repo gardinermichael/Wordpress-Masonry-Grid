@@ -28,7 +28,10 @@ A masonry grid hosted on a Wordpress page
   
 <h3>Workflow:</h3>
   
-* Using Custom Post Type, create a post type for your images to act as a placeholder.
-  * In this case, the post type was Newspaper Covers
+* Using Custom Post Type (CPT), create a post type for your images to act as a placeholder.
+  * In my case, the post type was Newspaper Covers.
+* Decide if you want to use Taxonomies or Categories to filter the images.
+  * Category will show up for ALL your posts.
+  * Taxonomy will only show up for your custom post type. Use CPT to create it and turn on the hierarchical setting (otherwise it'll act like tags)
    
   
