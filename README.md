@@ -4,8 +4,9 @@ A masonry grid hosted on a Wordpress page
 
 
 <h3>Wordpress Plugins:</h3>
--[Custom Post Type UI](https://wordpress.org/plugins/custom-post-type-ui/)
---
+[Custom Post Type UI](https://wordpress.org/plugins/custom-post-type-ui/)
+
+
 -[BJ Lazy Load](https://wordpress.org/plugins/bj-lazy-load/)
 --
 -[Regenerate Thumbnails](https://wordpress.org/plugins/regenerate-thumbnails/)
