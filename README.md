@@ -17,4 +17,11 @@ A masonry grid hosted on a Wordpress page
   * Fix image rotation retroactively
 
 
-<h3>Javascript Requiremnts:</h3>
+<h3>Javascript Libraries:</h3>
+
+* [Masonry](https://masonry.desandro.com/)
+  * Pinterest-style cascading grid with filterable UI buttons.
+* [imagesLoaded](https://masonry.desandro.com/)
+  * Masonry is only kicked off when the images are loaded. Doesn't seem to affect Infinite Scroll bugs.
+* [Infinite Scroll](https://infinite-scroll.com/)
+  * Buggy when paired with Masonry. Problems with loading the images before/after they're filtered. 
