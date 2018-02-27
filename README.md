@@ -46,5 +46,9 @@ A masonry grid hosted on a Wordpress page.
 * Turn on debug/logging via **wp-config.php**
   * define('WP_DEBUG', True);
   * define('WP_DEBUG_LOG', true);
+* Slugs and the Taxonomy/Category loops for filters
+* Two approaches: Subdivision vs. Infinite Scroll
+
+
    
   
