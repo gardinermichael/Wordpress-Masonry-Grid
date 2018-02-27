@@ -35,5 +35,8 @@ A masonry grid hosted on a Wordpress page
 * Decide if you want to use Taxonomies or Categories to filter the images.
   * Category will show up for ALL your posts.
   * Taxonomy will only show up for your custom post type. Use CPT to create it and turn on the hierarchical setting (it'll otherwise act like tags)
+* In my case, I used categories as a defining filter (a range of years), than taxonomy tags (published year) as a subfilter.
+  * Helps if images are named descriptively -- i.e. the year/month are included in the image titles.
+  
    
   
