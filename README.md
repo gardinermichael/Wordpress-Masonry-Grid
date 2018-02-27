@@ -33,7 +33,7 @@ A masonry grid hosted on a Wordpress page.
 <h3>Workflow:</h3>
   
 * Using Custom Post Type (CPT), create a post type for your images to act as a placeholder.
-  * In my case, the post type was Newspaper Covers.
+  * i.e. Post type was *Newspaper Covers*, each page was a *Newspaper Cover*
 * Decide if you want to use Taxonomies or Categories to filter the images.
   * Category will show up for ALL your posts.
   * Taxonomy will only show up for your custom post type. Use CPT to create it and turn on the hierarchical setting (it'll otherwise act like tags)
@@ -42,7 +42,7 @@ A masonry grid hosted on a Wordpress page.
 * Save customized PHP/CSS to the */wp-content/themes/your-theme/* folder
   * Add the css to **style.css**
   * Create a new php file for your HTML (i.e. **newspapers-grid.php**)
-  * Add Javascript to **footer.php**
+  * Add the Javascript to **footer.php**
 * Turn on debug/logging via **wp-config.php**
   * define('WP_DEBUG', True);
   * define('WP_DEBUG_LOG', true);
