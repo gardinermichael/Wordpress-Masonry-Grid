@@ -26,10 +26,9 @@ A masonry grid hosted on a Wordpress page
 * [Infinite Scroll](https://infinite-scroll.com/)
   * Buggy when paired with Masonry. Problems with loading the images before/after they're filtered. 
   
+<h3>Workflow:</h3>
   
-  <h3>Workflow:</h3>
-  
-  * Using Custom Post Type, create a post type for your images to act as a placeholder.
-    * In this case, the post type was Newspaper Covers
+* Using Custom Post Type, create a post type for your images to act as a placeholder.
+  * In this case, the post type was Newspaper Covers
    
   
