@@ -39,6 +39,12 @@ A masonry grid hosted on a Wordpress page
   * Taxonomy will only show up for your custom post type. Use CPT to create it and turn on the hierarchical setting (it'll otherwise act like tags)
 * In my case, I used categories as a defining filter (a range of years, per seperate page), than taxonomy tags (published year within the same page) as a subfilter.
   * It helps if images are named descriptively -- i.e. the year/month are included in the image titles.
-  
+* Save customized PHP/CSS to the */wp-content/themes/your-theme/* folder
+  * Add the css to **style.css**
+  * Create a new php file for your HTML (i.e. **newspapers-grid.php**)
+  * Add Javascript to **footer.php**
+* Turn on debug/logging via **wp-config.php**
+  * define('WP_DEBUG', True);
+  * define('WP_DEBUG_LOG', true);
    
   
