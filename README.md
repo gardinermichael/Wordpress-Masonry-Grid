@@ -4,11 +4,11 @@ A masonry grid hosted on a Wordpress page
 
 
 <h3>Wordpress Plugins:</h3>
--[https://wordpress.org/plugins/custom-post-type-ui/](Custom Post Type UI)
+-[Custom Post Type UI](https://wordpress.org/plugins/custom-post-type-ui/)
 --
--[https://wordpress.org/plugins/bj-lazy-load/](BJ Lazy Load)
+-[BJ Lazy Load](https://wordpress.org/plugins/bj-lazy-load/)
 --
--[https://wordpress.org/plugins/regenerate-thumbnails/](Regenerate Thumbnails)
+-[Regenerate Thumbnails](https://wordpress.org/plugins/regenerate-thumbnails/)
 --
 -[https://wordpress.org/plugins/fix-image-rotation/](Fix Image Rotation)
 --
