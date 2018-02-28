@@ -1,12 +1,6 @@
-
 /* 
-
 The portion below goes INTO /wp-content/themes/your-theme/footer.php
-
 */
-
-
-
 
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
@@ -14,10 +8,7 @@ The portion below goes INTO /wp-content/themes/your-theme/footer.php
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
 
 
-
 <script>
-
-
 var $container = jQuery('.grid');
 
 jQuery(window).on('load', function () {
@@ -33,8 +24,5 @@ jQuery(window).on('load', function () {
         var filterValue = jQuery(this).attr('data-filter');
         $container.isotope({filter: filterValue});
     });
-
 });
-
-
 </script>
