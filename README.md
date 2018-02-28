@@ -2,7 +2,7 @@
 
 <h3>Project:</h3>
 
-[Part of a project](https://www.occrp.org/en/28-ccwatch/cc-watch-indepth/7653-paul-biya-cameroon-s-roaming-president) tracking Cameroon [President Paul Biya’s travels](https://www.biyascameroon.com/), this [filterable grid](https://www.cameroundebiya.com/papers-1980s/) displayed roughly 4,000 newspaper covers from over the past 35 years.
+[Part of a project](https://www.occrp.org/en/28-ccwatch/cc-watch-indepth/7653-paul-biya-cameroon-s-roaming-president) tracking Cameroon President Paul Biya’s [travels](https://www.biyascameroon.com/), this [filterable grid](https://www.cameroundebiya.com/papers-1980s/) displayed roughly 4,000 newspaper covers from over the past 35 years.
 
 
 <h3>Wordpress Plugins:</h3>
