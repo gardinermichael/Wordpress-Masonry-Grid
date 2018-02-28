@@ -1,3 +1,7 @@
+/*
+The portion below goes INTO /wp-content/themes/your-theme/style.css
+*/
+
 * { box-sizing: border-box; }
 
     /* force scrollbar */
