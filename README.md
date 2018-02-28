@@ -1,4 +1,4 @@
-# Wordpress-Filterable-Image-Grid
+# Filterable Image Grid on Wordpress
 
 <h3>Project:</h3>
 
