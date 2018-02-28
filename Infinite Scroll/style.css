@@ -1,0 +1,37 @@
+* { box-sizing: border-box; }
+
+    /* force scrollbar */
+    html { overflow-y: scroll; }
+
+    body {
+        font-family: sans-serif;
+    }
+
+    /* ---- isotope ---- */
+
+    /* clear fix */
+    .grid:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    /* ---- .grid-item ---- */
+
+    .grid-sizer,
+    .grid-item {
+        width: 25%;
+    }
+
+    .grid-item {
+        float: left;
+        display: inline-block;
+    }
+
+    .grid-item img {
+        display: block;
+        max-width: 100%;
+    }
+    .gutter-sizer{
+        width:5%;
+    }
