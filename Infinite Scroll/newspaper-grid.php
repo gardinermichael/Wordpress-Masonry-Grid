@@ -80,7 +80,7 @@ echo '<div class="grid">
 if($newspapers->have_posts()) : while ($newspapers->have_posts()) : $newspapers->the_post();
 
 ?>
-
+<div class="post">
 <div class="grid-item <?php isotope_classes(get_the_id()); ?>">
 
 	<?php
@@ -89,10 +89,11 @@ if($newspapers->have_posts()) : while ($newspapers->have_posts()) : $newspapers-
 		echo '<p>'
 	?>
 </div>
+</div>
 
 <?php endwhile; ?>
 
-
+// for echo '<div class="grid">
 </div>
 
 <!--  <div class="pagination">
