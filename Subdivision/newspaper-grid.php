@@ -1,7 +1,11 @@
+/*
+This .php file is placed in /wp-content/themes/your-theme/
+Note that the name (or how it will appear in the Wordpress dashboard) is "papers"
+*/
+
 <?php get_header(); /* Template Name: papers */ ?>
 
 <?php
-
 function isotope_classes($id){
 	$terms = wp_get_post_terms(get_the_id(), 'published_year');
 	foreach ($terms as $term){
@@ -12,7 +16,6 @@ function isotope_classes($id){
 		echo $category->slug.' ';
 	}
 }
-
 ?>
 
 <?php
@@ -228,7 +231,6 @@ if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
 elseif ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
 else { $paged = 1; }
 
-
 if ($post_slug=="papers-1990-1993") {
 	$args = array(
 		'post_type'=>'newspapers',
@@ -289,17 +291,14 @@ if ($post_slug=="papers-2010s") {
 	);
 };
 
-
 $newspapers = new Wp_Query($args);
 echo '<div class="grid">
     <div class="grid-sizer"></div>
     <div class="gutter-sizer"></div>';
 if($newspapers->have_posts()) : while ($newspapers->have_posts()) : $newspapers->the_post();
-
 ?>
 
 <div class="grid-item <?php isotope_classes(get_the_id()); ?>">
-
   <?php
 		echo "<a data-fancybox='gallery' data-caption='" . get_the_title(get_the_ID()) . "' href='" . get_the_post_thumbnail_url( get_the_ID(), 'full' ) . "'>";
 		echo "<img src='" . get_the_post_thumbnail_url( get_the_ID(), 'thumbnail' ) . "'></a>";
@@ -309,7 +308,7 @@ if($newspapers->have_posts()) : while ($newspapers->have_posts()) : $newspapers-
 
 <?php endwhile; ?>
 
-
+// Closes '<div class="grid">
 </div>
 
 <!--  <div class="pagination">
@@ -318,5 +317,4 @@ if($newspapers->have_posts()) : while ($newspapers->have_posts()) : $newspapers-
  </div> -->
 
 <?php else: endif; ?>
-
 <?php get_footer(); ?>
