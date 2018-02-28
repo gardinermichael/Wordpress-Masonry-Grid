@@ -1,3 +1,8 @@
+/*
+This .php file is placed in /wp-content/themes/your-theme/
+Note that the name (or how it will appear in the Wordpress dashboard) is "papers"
+*/
+
 <?php get_header(); /* Template Name: papers */ ?>
 
 <?php
