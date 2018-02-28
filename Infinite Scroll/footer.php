@@ -1,6 +1,4 @@
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-
-
 <script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 
@@ -8,14 +6,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
 
 
-
+// This version calls Infinite Scroll outside of imagesLoaded (only Isotope is wrapped in imagesLoaded)
 <script>
-
-// // init Isotope
-// var $grid = jQuery('.grid').isotope({
-//   // options
-// });
-
 var $container = jQuery('.grid');
 
 jQuery(window).on('load', function () {
@@ -40,7 +32,7 @@ jQuery(window).on('load', function () {
             itemSelector: '.post',
             path: 'page/{{#}}',
             bufferPx: 200,
-            append: '.post',
+            append: '.post', // This could also be and/or should be '.grid-item'. newspapers-grid.php has a .post div tag wrapping the .grid-item div tag.
             loading: {
                 finishedMsg: 'We\'re done here.',
             }
@@ -55,7 +47,45 @@ jQuery(window).on('load', function () {
             });
         });
 });
+</script>
 
+
+// This version wraps everything (including Infinite Scroll) in imagesLoaded
+<script>
+jQuery('.grid').imagesLoaded(function () {
+
+	var $grid = jQuery('.grid');
+
+	$grid.isotope({
+	    itemSelector: '.grid-item',
+	    percentPosition: true
+		// masonry: {
+	 //        columnWidth: '.grid-sizer'
+	 //        }
+	    });
+
+
+	var iso = $grid.data('isotope');
+
+	$grid.infiniteScroll({
+		path: 'a.pagination__next', // This needs to be div.pagination like above. Relevant version of newspapers-grid.php doesn't have this tag. 
+	    append: '.grid-item',
+	    debug: true,
+	    status: '.infinite-scroll-request',
+	    outlayer: iso//,
+	    // onInit: function () {
+     //                this.on('load', function () {
+     //                    $grid.isotope('layout');
+     //                })
+     //            }
+		});
+
+	// filter items on button click
+	jQuery('.filter-button-group').on( 'click', 'button', function() {
+	  var filterValue = jQuery(this).attr('data-filter');
+	  $grid.isotope({ filter: filterValue });
+	});
+});
 
 </script>
 
