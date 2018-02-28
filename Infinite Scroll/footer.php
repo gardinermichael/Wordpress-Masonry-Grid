@@ -16,39 +16,48 @@
 //   // options
 // });
 
-jQuery('.grid').imagesLoaded(function () {
+var $container = jQuery('.grid');
 
-	var $grid = jQuery('.grid');
+jQuery(window).on('load', function () {
+    // Fire Isotope only when images are loaded
+    $container.imagesLoaded(function () {
+        $container.isotope({
+            itemSelector: '.grid-item',
+        });
+    });
 
-	$grid.isotope({
-	    itemSelector: '.grid-item',
-	    percentPosition: true
-		// masonry: {
-	 //        columnWidth: '.grid-sizer'
-	 //        }
-	    });
+    // Filter
+    jQuery('.filter-button-group').on('click', 'button', function () {
+        var filterValue = jQuery(this).attr('data-filter');
+        $container.isotope({filter: filterValue});
+    });
 
+    // Infinite Scroll
+    jQuery('.grid').infiniteScroll({
+    		debug: true,
+            navSelector: 'div.pagination',
+            nextSelector: 'div.pagination a:first',
+            itemSelector: '.post',
+            path: 'page/{{#}}',
+            bufferPx: 200,
+            append: '.post',
+            loading: {
+                finishedMsg: 'We\'re done here.',
+            }
+        },
 
-	var iso = $grid.data('isotope');
-
-	$grid.infiniteScroll({
-		path: 'a.pagination__next',
-	    append: '.grid-item',
-	    debug: true,
-	    status: '.infinite-scroll-request',
-	    outlayer: iso//,
-	    // onInit: function () {
-     //                this.on('load', function () {
-     //                    $grid.isotope('layout');
-     //                })
-     //            }
-		});
-
-	// filter items on button click
-	jQuery('.filter-button-group').on( 'click', 'button', function() {
-	  var filterValue = jQuery(this).attr('data-filter');
-	  $grid.isotope({ filter: filterValue });
-	});
+        // Infinite Scroll Callback
+        function (newElements) {
+            var $newElems = jQuery(newElements).hide();
+            $newElems.imagesLoaded(function () {
+                $newElems.fadeIn();
+                $container.isotope('appended', $newElems);
+            });
+        });
 });
+
+
+</script>
+
 
 </script>
