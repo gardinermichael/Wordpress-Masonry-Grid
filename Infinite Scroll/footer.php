@@ -1,12 +1,15 @@
+/* 
+One of the portions (two different approaches) below goes INTO /wp-content/themes/your-theme/footer.php
+*/
+
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 <script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
 
 
-// This version calls Infinite Scroll outside of imagesLoaded (only Isotope is wrapped in imagesLoaded)
+// This approach calls Infinite Scroll outside of imagesLoaded (only Isotope is wrapped in imagesLoaded)
 <script>
 var $container = jQuery('.grid');
 
@@ -50,7 +53,7 @@ jQuery(window).on('load', function () {
 </script>
 
 
-// This version wraps everything (including Infinite Scroll) in imagesLoaded
+// This approach wraps everything (including Infinite Scroll) in imagesLoaded
 <script>
 jQuery('.grid').imagesLoaded(function () {
 
@@ -86,8 +89,4 @@ jQuery('.grid').imagesLoaded(function () {
 	  $grid.isotope({ filter: filterValue });
 	});
 });
-
-</script>
-
-
 </script>
